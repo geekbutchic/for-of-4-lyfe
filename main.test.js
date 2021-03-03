@@ -18,7 +18,7 @@ addAll = (sum) => {
 //   }
 //   return count;
 // }
-
+// alternative solution 
 countSpaces = (str) => {
 return str.split(" ").length - 1;  
 };
