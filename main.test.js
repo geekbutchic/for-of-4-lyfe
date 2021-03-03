@@ -32,7 +32,7 @@ countTrues = (str) => {
   } return counter.length;
 };
 
-const makeFriendly = function (friend) {
+makeFriendly = (friend) => {
   const result = [];
 // touch function
   for (const friends of friend) {
@@ -55,7 +55,7 @@ addNoises = (str) => {
 // touch function 
 };
 
-const womenOnly = function (people) {
+womenOnly = (people) => {
   const result = [];
 
   for (const person of people) {
@@ -66,7 +66,7 @@ const womenOnly = function (people) {
   return result;
 };
 
-const integersOnly = function (nums) {
+integersOnly = (nums) => {
   const result = [];
 
   for (const num of nums) {
