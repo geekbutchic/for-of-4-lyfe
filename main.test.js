@@ -8,21 +8,25 @@ addAll = (sum) => {
     }
   return total;
 };
-// const countSpaces = function (sentence) {
-//   let count = 0;
 
-//   for (const char of sentence) {
-//     if (char === ' ') {
-//       count = count + 1;
-//     }
-//   }
-//   return count;
-// }
+// Reduce problem
+countSpaces = (sentence) => {
+  let count = 0;
+
+  for (const char of sentence) {
+    if (char === ' ') {
+      count += 1;
+      // += adds one 
+    }
+  }
+  return count;
+}
 // alternative solution 
 countSpaces = (str) => {
 return str.split(" ").length - 1;  
 };
 
+// 
 countTrues = (str) => {
   let counter = [];
   for (let i = 0; i < str.length; i++) {
@@ -32,16 +36,31 @@ countTrues = (str) => {
   } return counter.length;
 };
 
-makeFriendly = (friend) => {
-  const result = [];
-// touch function
-  for (const friends of friend) {
-    if (friends[friends.length - 1] === '.') {
-      result.push('!');
+countTrues = (str) => {
+  let counter = 0;
+  for (value of str) {
+    if (value === true) {
+      counter = counter + 1;
     }
   }
-  return result;
+  return counter;
+}
+
+makeFriendly = (str) => {
+  let outputStr = '';
+  for (const char of str) {
+    if (char === '.') {
+      outputStr = outputStr + '!';
+    } else {
+      outputStr = outputStr + char;
+    }
+  }
+  return outputStr;
 };
+
+makeFriendly = (str) => {
+  return str.split('.').join ('!');
+}
 
 cubeAll = (numbers) => {
   const cubed = [];
@@ -51,10 +70,30 @@ cubeAll = (numbers) => {
   return cubed;
 };
 
-addNoises = (str) => {
-// touch function 
-};
+function addNoises(str) {
+  let output = [];
+  
+  for (const animalName of str) {
 
+    // Dogs
+    if (animalName === 'Fido' || animalName === 'Rolph' || animalName === 'Maisie') {
+      // outputs.push(`${animalName} says "Woof!"`)
+      output.push(animalName + " says \"Woof!\"")
+    }
+
+    // Cats
+    if (animalName === 'Garfield' || animalName === 'Heathcliff') {
+      output.push(animalName + " says \"Meow!\"")
+    }
+    // Dinosaur 
+    if (animalName === 'Barnie' || animalName === 'Sharp Tooth') {
+      output.push(animalName + " says \"ROWR.\"")
+    }
+  }
+
+  return output;
+}
+// Filter for last two solutions
 womenOnly = (people) => {
   const result = [];
 
